@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Pagina Inicial - Login";
+}
+
+<div class="bg-black align-content-md-end">
+    <form class="row-cols-md-1 text-center border p-5" style="border-color: orange !important; background: orange !important; border-radius: 26px;" method="post" action="/Home/Login">
+        <h1>Login</h1>
+        <div class="mb-2">
+            <input type="text" class="form-control border-0 border-bottom border-dark" style="background: transparent !important;" placeholder="Usuario">
+        </div>
+        <div class="mb-2">
+            <input type="password" class="form-control border-0 border-bottom border-dark mb-3" style="background: transparent !important;" placeholder="Senha">
+        </div>
+        <button type="submit" class="btn btn-primary">Entrar</button>
+        <a href="/Home/Cadastro">Cadastre-se</a>
+        <a href="Home/EsqueciSenha">Esqueceu a senha?</a>
+    </form>
+</div>

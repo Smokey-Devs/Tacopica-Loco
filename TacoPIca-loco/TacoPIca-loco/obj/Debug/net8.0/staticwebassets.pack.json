@@ -249,6 +249,10 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+      "Id": "F:\\2A-MODULAR\\CAIOXeTORSA\\TCM\\Tacopica-Loco\\TacoPIca-loco\\TacoPIca-loco\\wwwroot\\logonsf.png",
+      "PackagePath": "staticwebassets\\logonsf.png"
+    },
+    {
       "Id": "F:\\2A-MODULAR\\CAIOXeTORSA\\TCM\\Tacopica-Loco\\TacoPIca-loco\\TacoPIca-loco\\wwwroot\\logozao.jpg",
       "PackagePath": "staticwebassets\\logozao.jpg"
     },

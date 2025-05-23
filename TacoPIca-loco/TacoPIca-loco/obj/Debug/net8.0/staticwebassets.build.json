@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "y0hVtSx2j2FhrGeu8xU1ommaGaUF5S2Et5G/Z5Y3CDc=",
+  "Hash": "zD0WrML1Ta7MxkFnEWfa+GKGje+NFNyzJkXwslH/14c=",
   "Source": "TacoPIca-loco",
   "BasePath": "_content/TacoPIca-loco",
   "Mode": "Default",
@@ -1212,6 +1212,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Identity": "F:\\2A-MODULAR\\CAIOXeTORSA\\TCM\\Tacopica-Loco\\TacoPIca-loco\\TacoPIca-loco\\wwwroot\\logonsf.png",
+      "SourceId": "TacoPIca-loco",
+      "SourceType": "Discovered",
+      "ContentRoot": "F:\\2A-MODULAR\\CAIOXeTORSA\\TCM\\Tacopica-Loco\\TacoPIca-loco\\TacoPIca-loco\\wwwroot\\",
+      "BasePath": "_content/TacoPIca-loco",
+      "RelativePath": "logonsf.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\logonsf.png"
     },
     {
       "Identity": "F:\\2A-MODULAR\\CAIOXeTORSA\\TCM\\Tacopica-Loco\\TacoPIca-loco\\TacoPIca-loco\\wwwroot\\logozao.jpg",
