@@ -5566,31 +5566,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\2mod\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Natália\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\2A-MODULAR\\CAIOXeTORSA\\TCM\\Tacopica-Loco\\TacoPIca-loco\\TacoPIca-loco\\TacoPIca-loco.csproj",
+      "projectUniqueName": "C:\\Users\\Natália\\Desktop\\Tacopica-Loco\\TacoPIca-loco\\TacoPIca-loco\\TacoPIca-loco.csproj",
       "projectName": "TacoPIca-loco",
-      "projectPath": "F:\\2A-MODULAR\\CAIOXeTORSA\\TCM\\Tacopica-Loco\\TacoPIca-loco\\TacoPIca-loco\\TacoPIca-loco.csproj",
-      "packagesPath": "C:\\Users\\2mod\\.nuget\\packages\\",
-      "outputPath": "F:\\2A-MODULAR\\CAIOXeTORSA\\TCM\\Tacopica-Loco\\TacoPIca-loco\\TacoPIca-loco\\obj\\",
+      "projectPath": "C:\\Users\\Natália\\Desktop\\Tacopica-Loco\\TacoPIca-loco\\TacoPIca-loco\\TacoPIca-loco.csproj",
+      "packagesPath": "C:\\Users\\Natália\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Natália\\Desktop\\Tacopica-Loco\\TacoPIca-loco\\TacoPIca-loco\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\2mod\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Natália\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -5638,7 +5631,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Users\\2mod\\.dotnet\\sdk\\8.0.406/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Users\\Natália\\.dotnet\\sdk\\8.0.406/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

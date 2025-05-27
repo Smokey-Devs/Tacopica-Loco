@@ -1,0 +1,45 @@
+@{
+    ViewData["Title"] = "Cadastrar";
+    Layout = "~/Views/Shared/_Header2.cshtml";
+}
+<link rel="stylesheet" href="~/css/Add/style.css" asp-append-version="true"/>
+
+<div class="italiana-regular form-wrapper d-flex justify-content-center align-items-center vh-100">
+    <div class="form-card">
+        <h2 class="text-center mb-3">Cadastrar</h2>
+
+        <div class="tabs mb-4">
+            <button class="tab-button active-tab" data-target="form-item">Item/Prato</button>
+            <button class="tab-button" data-target="form-funcionario">Funcionário</button>
+            <button class="tab-button" data-target="form-fornecedor">Fornecedor</button>
+        </div>
+
+        <div class="form-content">
+            <form id="form-item" class="form-section active-form">
+                <input type="text" placeholder="Nome" class="form-control border-0 border-bottom border-dark mb-2"/>
+                <textarea placeholder="Descrição" class="form-control border-0 border-bottom border-dark mb-3 b-0"></textarea>
+                <button type="submit" class="btn btn-primary">Confirmar</button>
+            </form>
+
+            <form id="form-funcionario" class="form-section">
+                <input type="text" placeholder="Nome" class="form-control border-0 border-bottom border-dark mb-2"/>
+                <input type="text" placeholder="CPF" class="form-control border-0 border-bottom border-dark mb-2"/>
+                <input type="text" placeholder="Telefone" class="form-control border-0 border-bottom border-dark mb-2"/>
+                <input type="email" placeholder="Email" class="form-control border-0 border-bottom border-dark mb-2"/>
+                <input type="text" placeholder="Usuário" class="form-control border-0 border-bottom border-dark mb-2"/>
+                <input type="password" placeholder="Senha" class="form-control border-0 border-bottom border-dark mb-3"/>
+                <button type="submit" class="btn btn-primary">Confirmar</button>
+            </form>
+
+            <form id="form-fornecedor" class="form-section">
+                <input type="text" placeholder="Nome" class="form-control mb-2"/>
+                <input type="email" placeholder="Email" class="form-control mb-2"/>
+                <input type="text" placeholder="Telefone" class="form-control mb-3"/>
+                <button type="submit" class="btn btn-primary">Confirmar</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="~/js/addFormsTabs.js" asp-append-version="true"></script>
+

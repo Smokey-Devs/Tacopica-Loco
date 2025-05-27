@@ -17,51 +17,51 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = TacoPIca_loco
 build_property.RootNamespace = TacoPIca_loco
-build_property.ProjectDir = F:\2A-MODULAR\CAIOXeTORSA\TCM\Tacopica-Loco\TacoPIca-loco\TacoPIca-loco\
+build_property.ProjectDir = C:\Users\Natália\Desktop\Tacopica-Loco\TacoPIca-loco\TacoPIca-loco\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = F:\2A-MODULAR\CAIOXeTORSA\TCM\Tacopica-Loco\TacoPIca-loco\TacoPIca-loco
+build_property.MSBuildProjectDirectory = C:\Users\Natália\Desktop\Tacopica-Loco\TacoPIca-loco\TacoPIca-loco
 build_property._RazorSourceGeneratorDebug = 
 
-[F:/2A-MODULAR/CAIOXeTORSA/TCM/Tacopica-Loco/TacoPIca-loco/TacoPIca-loco/Views/Login/Index.cshtml]
+[C:/Users/Natália/Desktop/Tacopica-Loco/TacoPIca-loco/TacoPIca-loco/Views/Login/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/2A-MODULAR/CAIOXeTORSA/TCM/Tacopica-Loco/TacoPIca-loco/TacoPIca-loco/Views/Login/Register.cshtml]
+[C:/Users/Natália/Desktop/Tacopica-Loco/TacoPIca-loco/TacoPIca-loco/Views/Login/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cUmVnaXN0ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/2A-MODULAR/CAIOXeTORSA/TCM/Tacopica-Loco/TacoPIca-loco/TacoPIca-loco/Views/Pages/Home.cshtml]
+[C:/Users/Natália/Desktop/Tacopica-Loco/TacoPIca-loco/TacoPIca-loco/Views/Pages/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcQWRkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Natália/Desktop/Tacopica-Loco/TacoPIca-loco/TacoPIca-loco/Views/Pages/Home.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcSG9tZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/2A-MODULAR/CAIOXeTORSA/TCM/Tacopica-Loco/TacoPIca-loco/TacoPIca-loco/Views/Shared/Error.cshtml]
+[C:/Users/Natália/Desktop/Tacopica-Loco/TacoPIca-loco/TacoPIca-loco/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/2A-MODULAR/CAIOXeTORSA/TCM/Tacopica-Loco/TacoPIca-loco/TacoPIca-loco/Views/Shared/_Header1.cshtml]
+[C:/Users/Natália/Desktop/Tacopica-Loco/TacoPIca-loco/TacoPIca-loco/Views/Shared/_Header1.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9IZWFkZXIxLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/2A-MODULAR/CAIOXeTORSA/TCM/Tacopica-Loco/TacoPIca-loco/TacoPIca-loco/Views/Shared/_Header2.cshtml]
+[C:/Users/Natália/Desktop/Tacopica-Loco/TacoPIca-loco/TacoPIca-loco/Views/Shared/_Header2.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9IZWFkZXIyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/2A-MODULAR/CAIOXeTORSA/TCM/Tacopica-Loco/TacoPIca-loco/TacoPIca-loco/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Natália/Desktop/Tacopica-Loco/TacoPIca-loco/TacoPIca-loco/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/2A-MODULAR/CAIOXeTORSA/TCM/Tacopica-Loco/TacoPIca-loco/TacoPIca-loco/Views/_ViewImports.cshtml]
+[C:/Users/Natália/Desktop/Tacopica-Loco/TacoPIca-loco/TacoPIca-loco/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/2A-MODULAR/CAIOXeTORSA/TCM/Tacopica-Loco/TacoPIca-loco/TacoPIca-loco/Views/_ViewStart.cshtml]
+[C:/Users/Natália/Desktop/Tacopica-Loco/TacoPIca-loco/TacoPIca-loco/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
-
-[F:/2A-MODULAR/CAIOXeTORSA/TCM/Tacopica-Loco/TacoPIca-loco/TacoPIca-loco/Views/Shared/_Layout.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = b-ypmp4v927n

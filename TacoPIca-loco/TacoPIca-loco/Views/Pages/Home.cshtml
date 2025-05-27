@@ -1,7 +1,33 @@
-
 @{
     ViewData["Title"] = "Home";
+    Layout = "~/Views/Shared/_Header2.cshtml";
 }
+<link rel="stylesheet" href="~/css/Home/style.css" asp-append-version="true"/>
 
-<h1>Home</h1>
+
+<div class="container dashboard-container d-flex flex-column align-items-center justify-content-start">
+    <h1 class="sansita-swashed-regular">Visão Geral</h1>
+
+    <section class="dashboard-cards">
+        <article class="card-box">
+            <h2>Total de Pedidos</h2>
+            <div class="infos">
+                <i class="icon fa-solid fa-receipt"></i><span>55</span>
+            </div>
+        </article>
+
+        <article class="card-box">
+            <h2>Faturamento</h2>
+            <div class="infos">
+                <i class="icon fa-solid fa-coins"></i><span>R$ 42.120,00</span>
+            </div>
+        </article>
+    </section>
+
+    <div class="chart-wrapper">
+        <canvas id="faturamentoChart"></canvas>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
 

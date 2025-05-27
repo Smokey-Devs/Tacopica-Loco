@@ -1,13 +1,64 @@
-<header>
-    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light box-shadow"
-         style="background-color: orange; width: 10%; height: 100vh; position: absolute">
-        <div class="container-fluid">
-            <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"><img src="logonsf.png"
-                                                                                              style="width: 5rem;" /></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"
-                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        </div>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>@ViewData["Title"] - TacoPica_loco</title>
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="~/css/reset.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="~/TacoPIca_loco.styles.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="~/css/base.css" asp-append-version="true"/>
+    <script src="https://kit.fontawesome.com/a3a5d372e6.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="d-flex vh-100">
+    <nav class="navbar navbar-expand-sm navbar-light flex-column align-items-center"
+         style="background-color: #F07C19; width: 140px;">
+        <a class="navbar-brand my-3" asp-controller="Pages" asp-action="Home">
+            <img src="~/logonsf.png" style="width: 5.6rem;" alt="TacoPica Loco logo"/>
+        </a>
+
+        <ul class="navbar-nav flex-column align-items-center mt-5" style="gap: 2rem;">
+            <li class="nav-item">
+                <a class="nav-link @(ViewContext.RouteData.Values["action"]?.ToString() == "Home" ? "text-warning" : "")"
+                   asp-controller="Pages" asp-action="Home">
+                    <i class="icon fa-solid fa-house"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link @(ViewContext.RouteData.Values["action"]?.ToString() == "Add" ? "text-warning" : "")"
+                   asp-controller="Pages" asp-action="Add">
+                    <i class="icon fa-solid fa-square-plus"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link @(ViewContext.RouteData.Values["action"]?.ToString() == "Search" ? "text-warning" : "")"
+                   asp-controller="Pages" asp-action="Search">
+                    <i class="icon fa-solid fa-magnifying-glass"></i>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link @(ViewContext.RouteData.Values["action"]?.ToString() == "Situation" ? "text-warning" : "")"
+                   asp-controller="Pages" asp-action="Situation">
+                    <i class="icon fa-solid fa-receipt"></i>
+                </a>
+            </li>
+        </ul>
     </nav>
-</header>
+    <main class="flex-fill">
+        @RenderBody()
+    </main>
+</div>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+@await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
