@@ -1,27 +1,31 @@
 .form-card {
     background-color: #804022;
     padding: 2rem;
-    min-width: 50rem;
-    min-height: 40rem;
+    min-width: 40rem;
+    min-height: 39rem;
     color: white;
     border-radius: 20px !important;
     display: flex;
     flex-direction: column;
     align-items: center;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-    justify-content: center;
 }
 
-.tabs {
+.tabs > ul {
     display: flex;
-    justify-content: space-around;
+    flex-direction: row;
+    gap: 2rem;
+    font-size: 21px;
+    font-weight: bold;
+    color: #fff;
 }
 
 .tab-button {
-    background-color: #f07c19;
-    border: none;
+    color: #fff;
     border-radius: 12px;
     padding: 0.5rem 1rem;
+    border: none;
+    background: transparent;
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.2s ease-in-out;
@@ -32,8 +36,8 @@
 }
 
 .active-tab {
-    background-color: #fff;
-    color: #000;
+    background-color: #E26763;
+    color: #fff;
 }
 
 .form-section {
@@ -41,9 +45,41 @@
 }
 
 .active-form {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+.form-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    color: #fff;
+    font-size: 72px;
+    margin-bottom: 5rem;
 }
 
 .form-control {
-    border: 0 !important;
+    background: transparent;
+    border-radius: 0 !important;
+    color: #fff;
+}
+
+.form-control:focus {
+    border-color: #e96f00;
+    box-shadow: 0 0 0 1px rgba(233, 111, 0, 0.25);
+    outline: none;
+    border-radius: 2px;
+    background-color: transparent;
+    color: #fff;
+}
+
+.form-control::placeholder {
+    color: #fff;
+    opacity: 0.7;
 }

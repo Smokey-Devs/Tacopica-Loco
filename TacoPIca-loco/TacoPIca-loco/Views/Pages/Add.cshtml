@@ -6,18 +6,27 @@
 
 <div class="italiana-regular form-wrapper d-flex justify-content-center align-items-center vh-100">
     <div class="form-card">
-        <h2 class="text-center mb-3">Cadastrar</h2>
+        <h1 class="text-center mb-3 fw-bold">Cadastrar</h1>
 
-        <div class="tabs mb-4">
-            <button class="tab-button active-tab" data-target="form-item">Item/Prato</button>
-            <button class="tab-button" data-target="form-funcionario">Funcionário</button>
-            <button class="tab-button" data-target="form-fornecedor">Fornecedor</button>
-        </div>
+        <nav class="tabs mb-4">
+            <ul>
+                <li>
+                    <button class="tab-button active-tab" data-target="form-item">Item/Prato</button>
+                </li>
+                <li>
+                    <button class="tab-button" data-target="form-funcionario">Funcionário</button>
+                </li>
+                <li>
+                    <button class="tab-button" data-target="form-fornecedor">Fornecedor</button>
+                </li>
+            </ul>
+        </nav>
 
         <div class="form-content">
             <form id="form-item" class="form-section active-form">
-                <input type="text" placeholder="Nome" class="form-control border-0 border-bottom border-dark mb-2"/>
-                <textarea placeholder="Descrição" class="form-control border-0 border-bottom border-dark mb-3 b-0"></textarea>
+                <input type="text" placeholder="Nome" id="name" class="form-control border-0 border-bottom border-dark mb-2" required/>
+                <textarea placeholder="Descrição" id="desc"
+                          class="form-control border-0 border-bottom border-dark mb-5 b-0" required></textarea>
                 <button type="submit" class="btn btn-primary">Confirmar</button>
             </form>
 
@@ -27,14 +36,15 @@
                 <input type="text" placeholder="Telefone" class="form-control border-0 border-bottom border-dark mb-2"/>
                 <input type="email" placeholder="Email" class="form-control border-0 border-bottom border-dark mb-2"/>
                 <input type="text" placeholder="Usuário" class="form-control border-0 border-bottom border-dark mb-2"/>
-                <input type="password" placeholder="Senha" class="form-control border-0 border-bottom border-dark mb-3"/>
+                <input type="password" placeholder="Senha"
+                       class="form-control border-0 border-bottom border-dark mb-5"/>
                 <button type="submit" class="btn btn-primary">Confirmar</button>
             </form>
 
             <form id="form-fornecedor" class="form-section">
-                <input type="text" placeholder="Nome" class="form-control mb-2"/>
-                <input type="email" placeholder="Email" class="form-control mb-2"/>
-                <input type="text" placeholder="Telefone" class="form-control mb-3"/>
+                <input type="text" placeholder="Nome" class="form-control border-0 border-bottom border-dark mb-2"/>
+                <input type="email" placeholder="Email" class="form-control border-0 border-bottom border-dark mb-2"/>
+                <input type="text" placeholder="Telefone" class="form-control border-0 border-bottom border-dark mb-5"/>
                 <button type="submit" class="btn btn-primary">Confirmar</button>
             </form>
         </div>
