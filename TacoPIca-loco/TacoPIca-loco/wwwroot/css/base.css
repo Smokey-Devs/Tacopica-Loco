@@ -29,3 +29,48 @@ body {
     font-weight: 400;
     font-style: normal;
 }
+
+.card {
+    background-color: #804022;
+    padding: 2rem;
+    min-width: 40rem;
+    max-width: 60rem;
+    min-height: 39rem;
+    max-height: 42rem;
+    overflow: hidden;
+    color: white;
+    border-radius: 20px !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.tabs > ul {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    font-size: 21px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.tab-button {
+    color: #fff;
+    border-radius: 12px;
+    padding: 0.5rem 1rem;
+    border: none;
+    background: transparent;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.tab-button:hover {
+    background-color: #e96f00;
+}
+
+.active-tab {
+    background-color: #E26763;
+    color: #fff;
+}

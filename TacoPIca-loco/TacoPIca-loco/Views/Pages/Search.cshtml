@@ -1,0 +1,204 @@
+@{
+    ViewData["Title"] = "Search";
+    Layout = "~/Views/Shared/_Header2.cshtml";
+}
+<link rel="stylesheet" href="~/css/Search/style.css" asp-append-version="true"/>
+<div class="italiana-regular d-flex justify-content-center align-items-center vh-100">
+    <div class="card" style="width: 95%; max-width: 1000px;">
+        <h1>Lista</h1>
+        <nav class="tabs mb-4">
+            <ul>
+                <li>
+                    <button class="tab-button active-tab" data-target="table-item">Item/Prato</button>
+                </li>
+                <li>
+                    <button class="tab-button" data-target="table-funcionario">Funcionário</button>
+                </li>
+                <li>
+                    <button class="tab-button" data-target="table-fornecedor">Fornecedor</button>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Tabela Item/Prato -->
+        <table id="table-item" class="table-section active-table">
+            <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Descrição</th>
+                <th class="actions">Ações</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Pizza Margherita</td>
+                <td>Mussarela, tomate e manjericão</td>
+                <td class="actions">
+                    <a class="delete">Excluir</a>
+                    <a class="edit">Editar</a>
+                </td>
+            </tr>
+            <tr>
+                <td>Pizza Margherita</td>
+                <td>Mussarela, tomate e manjericão</td>
+                <td class="actions">
+                    <a class="delete">Excluir</a>
+                    <a class="edit">Editar</a>
+                </td>
+            </tr>
+            <tr>
+                <td>Pizza Margherita</td>
+                <td>Mussarela, tomate e manjericão</td>
+                <td class="actions">
+                    <a class="delete">Excluir</a>
+                    <a class="edit">Editar</a>
+                </td>
+            </tr>
+            <tr>
+                <td>Pizza Margherita</td>
+                <td>Mussarela, tomate e manjericão</td>
+                <td class="actions">
+                    <a class="delete">Excluir</a>
+                    <a class="edit">Editar</a>
+                </td>
+            </tr>
+            <tr>
+                <td>Pizza Margherita</td>
+                <td>Mussarela, tomate e manjericão</td>
+                <td class="actions">
+                    <a class="delete">Excluir</a>
+                    <a class="edit">Editar</a>
+                </td>
+            </tr>
+            <tr>
+                <td>Pizza Margherita</td>
+                <td>Mussarela, tomate e manjericão</td>
+                <td class="actions">
+                    <a class="delete">Excluir</a>
+                    <a class="edit">Editar</a>
+                </td>
+            </tr>
+            <tr>
+                <td>Pizza Margherita</td>
+                <td>Mussarela, tomate e manjericão</td>
+                <td class="actions">
+                    <a class="delete">Excluir</a>
+                    <a class="edit">Editar</a>
+                </td>
+            </tr>
+            <tr>
+                <td>Pizza Margherita</td>
+                <td>Mussarela, tomate e manjericão</td>
+                <td class="actions">
+                    <a class="delete">Excluir</a>
+                    <a class="edit">Editar</a>
+                </td>
+            </tr>
+            <tr>
+                <td>Hambúrguer Clássico</td>
+                <td>Carne, queijo, alface e tomate</td>
+                <td class="actions">
+                    <a class="delete">Excluir</a>
+                    <a class="edit">Editar</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+        <!-- Tabela Funcionário -->
+        <table id="table-funcionario" class="table-section">
+            <thead>
+            <tr>
+                <th>Nome</th>
+                <th>CPF</th>
+                <th>Telefone</th>
+                <th>Email</th>
+                <th>Usuário</th>
+                <th class="actions">Ações</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>João</td>
+                <td>123.456.789-00</td>
+                <td>(11) 99999-9999</td>
+                <td>joao@email.com</td>
+                <td>joaozinhotralha</td>
+                <td class="actions">
+                    <a class="delete">Excluir</a>
+                    <a class="edit">Editar</a>
+                </td>
+            </tr>
+            <tr>
+                <td>Tavin</td>
+                <td>987.654.321-00</td>
+                <td>(11) 98888-8888</td>
+                <td>tavinzn@email.com</td>
+                <td>tavs</td>
+                <td class="actions">
+                    <a class="delete">Excluir</a>
+                    <a class="edit">Editar</a>
+                </td>
+            </tr>
+            <tr>
+                <td>Torsani</td>
+                <td>987.654.321-00</td>
+                <td>(11) 97777-7777</td>
+                <td>torsinha@email.com</td>
+                <td>torsa</td>
+                <td class="actions">
+                    <a class="delete">Excluir</a>
+                    <a class="edit">Editar</a>
+                </td>
+            </tr>
+            <tr>
+                <td>Heitor</td>
+                <td>987.654.321-00</td>
+                <td>(11) 96666-6666</td>
+                <td>heitorsabotage@email.com</td>
+                <td>sabota</td>
+                <td class="actions">
+                    <a class="delete">Excluir</a>
+                    <a class="edit">Editar</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+        <!-- Tabela Fornecedor -->
+        <table id="table-fornecedor" class="table-section">
+            <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Telefone</th>
+                <th class="actions">Ações</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Fornecedor A</td>
+                <td>contato@fornecedora.com</td>
+                <td>(31) 97777-7777</td>
+                <td class="actions">
+                    <a class="delete">Excluir</a>
+                    <a class="edit">Editar</a>
+                </td>
+            </tr>
+            <tr>
+                <td>Fornecedor B</td>
+                <td>vendas@fornecedorb.com</td>
+                <td>(41) 96666-6666</td>
+                <td class="actions">
+                    <a class="delete">Excluir</a>
+                    <a class="edit">Editar</a>
+                </td>
+            </tr>
+            <!-- mais linhas exemplo -->
+            </tbody>
+        </table>
+
+    </div>
+</div>
+
+<script src="~/js/addFormsTabs.js" asp-append-version="true"></script>

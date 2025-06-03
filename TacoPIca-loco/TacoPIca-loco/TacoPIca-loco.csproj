@@ -14,7 +14,6 @@
     <ItemGroup>
       <Folder Include="Views\Pages\" />
       <Folder Include="wwwroot\css\Add\" />
-      <Folder Include="wwwroot\css\Search\" />
       <Folder Include="wwwroot\css\Situation\" />
     </ItemGroup>
 

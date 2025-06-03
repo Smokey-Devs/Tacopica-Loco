@@ -1,0 +1,88 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Georgia', serif;
+    background: url('https://i.imgur.com/6CvYcgG.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.table-section {
+    display: none;
+}
+.actions {
+    text-align: right;
+}
+
+.actions a {
+    margin-left: 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.delete {
+    color: red;
+}
+
+.edit {
+    color: dodgerblue;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.active-table {
+    display: block;
+    width: 80%;
+    font-weight: bold;
+    font-size: 1.5rem;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+thead {
+    background-color: transparent;
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+tbody {
+    display: block;
+    max-height: 350px;
+    overflow-y: auto;
+}
+
+tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+th, td {
+    padding: 0.75rem;
+    border-bottom: 1px solid white;
+    text-align: left;
+}
+
+tbody::-webkit-scrollbar {
+    width: 4px;
+}
+
+tbody::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+tbody::-webkit-scrollbar-thumb {
+    background-color: #999;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+tbody::-webkit-scrollbar-thumb:hover {
+    background-color: #ccc;
+}
