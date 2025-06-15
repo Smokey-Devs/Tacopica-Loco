@@ -1,7 +1,23 @@
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+
+
+// CRIE UM CONTEXT DEPOIS 
+
+
+
+builder.Services.AddDbContext<TacoPicaDatabase>(options =>
+{
+    options.UseMySql(
+        builder.Configuration.GetConnectionString("database"),
+        new MySqlServerVersion(new Version(8, 0, 42))
+    );
+});
 
 var app = builder.Build();
 

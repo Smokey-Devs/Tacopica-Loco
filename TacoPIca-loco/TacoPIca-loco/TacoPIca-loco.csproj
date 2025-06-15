@@ -9,12 +9,12 @@
 
     <ItemGroup>
       <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.7" />
+      <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="9.0.0-preview.3.efcore.9.0.0" />
     </ItemGroup>
 
     <ItemGroup>
       <Folder Include="Views\Pages\" />
       <Folder Include="wwwroot\css\Add\" />
-      <Folder Include="wwwroot\css\Situation\" />
     </ItemGroup>
 
 </Project>

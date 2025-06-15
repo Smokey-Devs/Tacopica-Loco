@@ -18,5 +18,10 @@ namespace TacoPIca_loco.Controllers
         {
             return View();
         }
+
+        public ActionResult Situation()
+        {
+            return View();
+        }
     }
 }

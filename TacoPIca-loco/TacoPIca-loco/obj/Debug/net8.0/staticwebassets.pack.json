@@ -9,6 +9,14 @@
       "PackagePath": "staticwebassets\\css\\Home\\style.css"
     },
     {
+      "Id": "C:\\Users\\Natália\\Desktop\\Tacopica-Loco\\TacoPIca-loco\\TacoPIca-loco\\wwwroot\\css\\Search\\style.css",
+      "PackagePath": "staticwebassets\\css\\Search\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\Natália\\Desktop\\Tacopica-Loco\\TacoPIca-loco\\TacoPIca-loco\\wwwroot\\css\\Situation\\style.css",
+      "PackagePath": "staticwebassets\\css\\Situation\\style.css"
+    },
+    {
       "Id": "C:\\Users\\Natália\\Desktop\\Tacopica-Loco\\TacoPIca-loco\\TacoPIca-loco\\wwwroot\\css\\base.css",
       "PackagePath": "staticwebassets\\css\\base.css"
     },
