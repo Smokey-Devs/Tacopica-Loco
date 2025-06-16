@@ -21,32 +21,32 @@
 <div class="d-flex vh-100">
     <nav class="navbar navbar-expand-sm navbar-light flex-column align-items-center"
          style="background-color: #F07C19; width: 140px;">
-        <a class="navbar-brand my-3" asp-controller="Pages" asp-action="Home">
+        <a class="navbar-brand my-3" asp-controller="Home" asp-action="Home">
             <img src="~/logonsf.png" style="width: 5.6rem;" alt="TacoPica Loco logo"/>
         </a>
 
         <ul class="navbar-nav flex-column align-items-center mt-5" style="gap: 2rem;">
             <li class="nav-item">
                 <a class="nav-link @(ViewContext.RouteData.Values["action"]?.ToString() == "Home" ? "text-warning" : "")"
-                   asp-controller="Pages" asp-action="Home">
+                   asp-controller="Home" asp-action="Home">
                     <i class="icon fa-solid fa-house"></i>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link @(ViewContext.RouteData.Values["action"]?.ToString() == "Add" ? "text-warning" : "")"
-                   asp-controller="Pages" asp-action="Add">
+                   asp-controller="Add" asp-action="Add">
                     <i class="icon fa-solid fa-square-plus"></i>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link @(ViewContext.RouteData.Values["action"]?.ToString() == "Search" ? "text-warning" : "")"
-                   asp-controller="Pages" asp-action="Search">
+                   asp-controller="Search" asp-action="Search">
                     <i class="icon fa-solid fa-magnifying-glass"></i>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link @(ViewContext.RouteData.Values["action"]?.ToString() == "Situation" ? "text-warning" : "")"
-                   asp-controller="Pages" asp-action="Situation">
+                   asp-controller="Situation" asp-action="Situation">
                     <i class="icon fa-solid fa-receipt"></i>
                 </a>
             </li>

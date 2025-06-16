@@ -1,0 +1,102 @@
+@{
+    ViewData["Title"] = "Search";
+    Layout = "~/Views/Shared/_Header2.cshtml";
+}
+
+@model TacoPIca_loco.Models.ViewModels.SearchViewModel
+
+<link rel="stylesheet" href="~/css/Search/style.css" asp-append-version="true"/>
+<div class="italiana-regular d-flex justify-content-center align-items-center vh-100">
+    <div class="card" style="width: 95%; max-width: 1000px;">
+        <h1>Lista</h1>
+        <nav class="tabs mb-4">
+            <ul>
+                <li>
+                    <button class="tab-button active-tab" data-target="table-item">Item/Prato</button>
+                </li>
+                <li>
+                    <button class="tab-button" data-target="table-funcionario">Funcionário</button>
+                </li>
+                <li>
+                    <button class="tab-button" data-target="table-fornecedor">Fornecedor</button>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Tabela Item/Prato -->
+        <table id="table-item" class="table-section active-table">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Descrição</th>
+                    <th class="actions">Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model.Pratos)
+                {
+                    <tr>
+                        <td>@item.Nome</td>
+                        <td>@item.Descricao</td>
+                        <td class="actions">
+                            <a class="delete">Excluir</a>
+                            <a class="edit">Editar</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <!-- Tabela Funcionário -->
+        <table id="table-funcionario" class="table-section">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th class="actions">Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var usuario in Model.Funcionarios)
+                {
+                    <tr>
+                        <td>@usuario.Nome</td>
+                        <td>@usuario.Email</td>
+                        <td class="actions">
+                            <a class="delete">Excluir</a>
+                            <a class="edit">Editar</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <!-- Tabela Fornecedor -->
+        <table id="table-fornecedor" class="table-section">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Tipo Produto</th>
+                    <th>Telefone</th>
+                    <th class="actions">Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var fornecedor in Model.Fornecedores)
+                {
+                    <tr>
+                        <td>@fornecedor.Nome</td>
+                        <td>@fornecedor.TipoProd</td>
+                        <td>@fornecedor.Tel</td>
+                        <td class="actions">
+                            <a class="delete">Excluir</a>
+                            <a class="edit">Editar</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script src="~/js/addFormsTabs.js" asp-append-version="true"></script>

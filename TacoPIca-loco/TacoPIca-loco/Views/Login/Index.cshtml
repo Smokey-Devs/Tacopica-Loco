@@ -2,7 +2,11 @@
     ViewData["Title"] = "Login";
     Layout = "~/Views/Shared/_Header1.cshtml";
 }
-
+@model TacoPIca_loco.Models.Usuario;
+@if (ViewBag.ErrorMessage != null)
+{
+    <div class="alert alert-danger">@ViewBag.ErrorMessage</div>
+}
 <link rel="stylesheet" href="~/css/index.css" asp-append-version="true"/>
 
 
@@ -12,21 +16,21 @@
      background: linear-gradient(to left, rgba(0,0,0,0.8) 95%, transparent);"
 >
     <div class="bg-black align-content-md-end">
-        <form class="row-cols-md-1 text-center border p-5"
-              style="border-color: orange !important; background: orange !important; border-radius: 26px;" method="post"
-              action="/Pages/Home/">
+        <form class="row-cols-md-1 text-center border p-5" asp-action="Index"
+              style="border-color: orange !important; background: orange !important; border-radius: 26px;" method="post">
             <h1>Login</h1>
             <div class="mb-2">
-                <input type="text" class="form-control border-0 border-bottom border-dark"
-                       style="background: transparent !important; border-radius: 0" placeholder="Usuario">
+                <input asp-for="Email" type="text" name="email" class="form-control border-0 border-bottom border-dark"
+                       style="background: transparent !important; border-radius: 0" placeholder="Usuário"/>
             </div>
             <div class="mb-2">
-                <input type="password" class="form-control border-0 border-bottom border-dark mb-3"
-                       style="background: transparent !important; border-radius: 0" placeholder="Senha">
+                <input asp-for="Senha" type="password" name="senha" class="form-control border-0 border-bottom border-dark mb-3"
+                       style="background: transparent !important; border-radius: 0" placeholder="Senha" />
             </div>
             <button type="submit" class="btn btn-primary">Entrar</button>
-            <a href="/Pages/Home/">Cadastre-se</a>
+            <a href="">Cadastre-se</a>
             <a href="Home/EsqueciSenha">Esqueceu a senha?</a>
         </form>
+
     </div>
 </div>

@@ -1,24 +1,13 @@
-using Microsoft.EntityFrameworkCore;
+using TacoPIca_loco.Repositorio;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-
-
-
-// CRIE UM CONTEXT DEPOIS 
-
-
-
-builder.Services.AddDbContext<TacoPicaDatabase>(options =>
-{
-    options.UseMySql(
-        builder.Configuration.GetConnectionString("database"),
-        new MySqlServerVersion(new Version(8, 0, 42))
-    );
-});
-
+builder.Services.AddScoped<FornecedorRepositorio>();
+builder.Services.AddScoped<FuncionarioRepositorio>();
+builder.Services.AddScoped<UsuarioRepositorio>();
+builder.Services.AddScoped<ProdutoRepositorio>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

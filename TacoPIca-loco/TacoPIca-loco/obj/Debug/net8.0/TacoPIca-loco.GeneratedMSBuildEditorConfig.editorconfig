@@ -26,6 +26,14 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Natália\Desktop\Tacopica-Loco\TacoPIca-loco\TacoPIca-loco
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Natália/Desktop/Tacopica-Loco/TacoPIca-loco/TacoPIca-loco/Views/Add/Add.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWRkXEFkZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Natália/Desktop/Tacopica-Loco/TacoPIca-loco/TacoPIca-loco/Views/Home/Home.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxIb21lLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Natália/Desktop/Tacopica-Loco/TacoPIca-loco/TacoPIca-loco/Views/Login/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -34,20 +42,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cUmVnaXN0ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Natália/Desktop/Tacopica-Loco/TacoPIca-loco/TacoPIca-loco/Views/Pages/Add.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcQWRkLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Natália/Desktop/Tacopica-Loco/TacoPIca-loco/TacoPIca-loco/Views/Pages/Home.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcSG9tZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Natália/Desktop/Tacopica-Loco/TacoPIca-loco/TacoPIca-loco/Views/Pages/Search.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcU2VhcmNoLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Natália/Desktop/Tacopica-Loco/TacoPIca-loco/TacoPIca-loco/Views/Pages/Situation.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcU2l0dWF0aW9uLmNzaHRtbA==
+[C:/Users/Natália/Desktop/Tacopica-Loco/TacoPIca-loco/TacoPIca-loco/Views/Search/Search.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VhcmNoXFNlYXJjaC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Natália/Desktop/Tacopica-Loco/TacoPIca-loco/TacoPIca-loco/Views/Shared/Error.cshtml]
@@ -64,6 +60,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Natália/Desktop/Tacopica-Loco/TacoPIca-loco/TacoPIca-loco/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Natália/Desktop/Tacopica-Loco/TacoPIca-loco/TacoPIca-loco/Views/Situation/Situation.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2l0dWF0aW9uXFNpdHVhdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Natália/Desktop/Tacopica-Loco/TacoPIca-loco/TacoPIca-loco/Views/_ViewImports.cshtml]
