@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TacoPIca-loco")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2e4a9846d40ad498dd70ae7679ffa47eae522390")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0d1affa815ad275455ee2d8347e594317994138c")]
 [assembly: System.Reflection.AssemblyProductAttribute("TacoPIca-loco")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TacoPIca-loco")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

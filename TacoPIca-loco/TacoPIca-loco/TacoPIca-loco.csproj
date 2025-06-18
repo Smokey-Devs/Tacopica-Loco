@@ -14,6 +14,7 @@
     </ItemGroup>
 
     <ItemGroup>
+      <Folder Include="Views\History\" />
       <Folder Include="Views\Home\" />
       <Folder Include="wwwroot\css\Add\" />
     </ItemGroup>

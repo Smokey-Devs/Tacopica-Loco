@@ -1,6 +1,9 @@
+@using Newtonsoft.Json
 @{
     ViewData["Title"] = "Cadastrar";
     Layout = "~/Views/Shared/_Header2.cshtml";
+    var tipoEdicao = ViewBag.TipoEdicao as string;
+    var itemJson = ViewBag.ItemEdicao as string;
 }
 <link rel="stylesheet" href="~/css/Add/style.css" asp-append-version="true"/>
 
@@ -23,33 +26,82 @@
         </nav>
 
         <div class="form-content">
-            <form id="form-item" class="form-section active-form">
-                <input type="text" placeholder="Nome" id="name" class="form-control border-0 border-bottom border-dark mb-2" required/>
-                <textarea placeholder="Descrição" id="desc"
-                          class="form-control border-0 border-bottom border-dark mb-5 b-0" required></textarea>
+            <form id="form-item" class="form-section active-form" asp-action="AdicionarPrato" method="post">
+                <input type="hidden" name="IdPrato" value="@((itemJson != null && tipoEdicao == "Prato") ? JsonConvert.DeserializeObject<Cardapio>(itemJson).IdPrato : 0)" />
+                <input name="Nome" type="text" placeholder="Nome"
+                       class="form-control border-0 border-bottom border-dark mb-2" required/>
+                <textarea name="Descricao" placeholder="Descrição"
+                          class="form-control border-0 border-bottom border-dark mb-2" required></textarea>
+                <input name="Preco" type="text" placeholder="Preço"
+                       class="form-control border-0 border-bottom border-dark mb-5" required/>
+
                 <button type="submit" class="btn btn-primary">Confirmar</button>
             </form>
 
-            <form id="form-funcionario" class="form-section">
-                <input type="text" placeholder="Nome" class="form-control border-0 border-bottom border-dark mb-2"/>
-                <input type="text" placeholder="CPF" class="form-control border-0 border-bottom border-dark mb-2"/>
-                <input type="text" placeholder="Telefone" class="form-control border-0 border-bottom border-dark mb-2"/>
-                <input type="email" placeholder="Email" class="form-control border-0 border-bottom border-dark mb-2"/>
-                <input type="text" placeholder="Usuário" class="form-control border-0 border-bottom border-dark mb-2"/>
-                <input type="password" placeholder="Senha"
+
+            <form id="form-funcionario" class="form-section" asp-action="AdicionarFuncionario" method="post">
+                <input type="hidden" name="IdFuncionario" value="@((itemJson != null && tipoEdicao == "Funcionario") ? JsonConvert.DeserializeObject<Funcionario>(itemJson).IdFuncionario : 0)" />
+
+                <input name="Nome" type="text" placeholder="Nome"
+                       class="form-control border-0 border-bottom border-dark mb-2"/>
+                <input name="Email" type="email" placeholder="Email"
+                       class="form-control border-0 border-bottom border-dark mb-2"/>
+                <button type="submit" class="btn btn-primary">Confirmar</button>
+            </form>
+
+            <form id="form-fornecedor" class="form-section" asp-action="AdicionarFornecedor" method="post">
+                <input type="hidden" name="IdFornecedor" value="@((itemJson != null && tipoEdicao == "Fornecedor") ? JsonConvert.DeserializeObject<Fornecedor>(itemJson).IdFornecedor : 0)" />
+                <input name="Nome" type="text" placeholder="Nome"
+                       class="form-control border-0 border-bottom border-dark mb-2"/>
+                <input name="Tel" type="text" placeholder="Telefone"
                        class="form-control border-0 border-bottom border-dark mb-5"/>
+                <input name="TipoProd" type="text" placeholder="Tipo de Produto"
+                       class="form-control border-0 border-bottom border-dark mb-2"/>
                 <button type="submit" class="btn btn-primary">Confirmar</button>
             </form>
 
-            <form id="form-fornecedor" class="form-section">
-                <input type="text" placeholder="Nome" class="form-control border-0 border-bottom border-dark mb-2"/>
-                <input type="email" placeholder="Email" class="form-control border-0 border-bottom border-dark mb-2"/>
-                <input type="text" placeholder="Telefone" class="form-control border-0 border-bottom border-dark mb-5"/>
-                <button type="submit" class="btn btn-primary">Confirmar</button>
-            </form>
+
         </div>
     </div>
 </div>
 
 <script src="~/js/addFormsTabs.js" asp-append-version="true"></script>
+<script>
+    const tipoEdicao = "@tipoEdicao";
+    const itemEdicao = JSON.parse('@Html.Raw(itemJson ?? "null")');
+
+    window.onload = function () {
+        if (tipoEdicao && itemEdicao) {
+            const tabMap = {
+                "Prato": "form-item",
+                "Funcionario": "form-funcionario",
+                "Fornecedor": "form-fornecedor"
+            };
+
+            const formId = tabMap[tipoEdicao];
+            if (formId) {
+                document.querySelectorAll(".form-section").forEach(f => f.classList.remove("active-form"));
+                document.querySelectorAll(".tab-button").forEach(b => b.classList.remove("active-tab"));
+
+                document.getElementById(formId)?.classList.add("active-form");
+                document.querySelector(`[data-target="${formId}"]`)?.classList.add("active-tab");
+
+                if (tipoEdicao === "Prato") {
+                    document.querySelector('#form-item input[name="Nome"]').value = itemEdicao.Nome;
+                    document.querySelector('#form-item textarea[name="Descricao"]').value = itemEdicao.Descricao;
+                    document.querySelector('#form-item input[name="Preco"]').value = itemEdicao.Preco;
+                } else if (tipoEdicao === "Funcionario") {
+                    document.querySelector('#form-funcionario input[name="Nome"]').value = itemEdicao.Nome;
+                    document.querySelector('#form-funcionario input[name="Email"]').value = itemEdicao.Email;
+                } else if (tipoEdicao === "Fornecedor") {
+                    document.querySelector('#form-fornecedor input[name="Nome"]').value = itemEdicao.Nome;
+                    document.querySelector('#form-fornecedor input[name="Tel"]').value = itemEdicao.Tel;
+                    document.querySelector('#form-fornecedor input[name="TipoProd"]').value = itemEdicao.TipoProd;
+                }
+            }
+        }
+    }
+</script>
+
+
 

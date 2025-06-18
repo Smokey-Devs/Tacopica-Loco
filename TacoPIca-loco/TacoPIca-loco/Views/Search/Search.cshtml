@@ -39,8 +39,8 @@
                         <td>@item.Nome</td>
                         <td>@item.Descricao</td>
                         <td class="actions">
-                            <a class="delete">Excluir</a>
-                            <a class="edit">Editar</a>
+                            <a class="delete" asp-action="ApagarProduto" asp-route-id="@item.IdPrato">Excluir</a>
+                            <a class="edit" asp-controller="Add" asp-action="EditarPrato" asp-route-id="@item.IdPrato">Editar</a>
                         </td>
                     </tr>
                 }
@@ -63,8 +63,8 @@
                         <td>@usuario.Nome</td>
                         <td>@usuario.Email</td>
                         <td class="actions">
-                            <a class="delete">Excluir</a>
-                            <a class="edit">Editar</a>
+                            <a class="delete" asp-action="ApagarFuncionario" asp-route-id="@usuario.IdFuncionario">Excluir</a>
+                            <a class="edit" asp-controller="Add" asp-action="EditarFuncionario" asp-route-id="@usuario.IdFuncionario">Editar</a>
                         </td>
                     </tr>
                 }
@@ -89,8 +89,8 @@
                         <td>@fornecedor.TipoProd</td>
                         <td>@fornecedor.Tel</td>
                         <td class="actions">
-                            <a class="delete">Excluir</a>
-                            <a class="edit">Editar</a>
+                            <a class="delete" asp-action="ApagarFornecedor" asp-route-id="@fornecedor.IdFornecedor">Excluir</a>
+                            <a class="edit" asp-controller="Add" asp-action="EditarFornecedor" asp-route-id="@fornecedor.IdFornecedor">Editar</a>
                         </td>
                     </tr>
                 }

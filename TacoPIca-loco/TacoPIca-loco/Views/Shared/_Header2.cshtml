@@ -50,6 +50,12 @@
                     <i class="icon fa-solid fa-receipt"></i>
                 </a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link @(ViewContext.RouteData.Values["action"]?.ToString() == "History" ? "text-warning" : "")"
+                   asp-controller="History" asp-action="History">
+                    <i class="icon fa-solid fa-clock-rotate-left"></i>
+                </a>
+            </li>
         </ul>
     </nav>
     <main class="flex-fill">

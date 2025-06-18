@@ -1,5 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using System.Data;
+using Microsoft.AspNetCore.Mvc;
 using TacoPIca_loco.Models;
 
 namespace TacoPIca_loco.Repositorio
@@ -8,42 +9,18 @@ namespace TacoPIca_loco.Repositorio
     {
         private readonly string _conexaoMySql = configuration.GetConnectionString("database");
 
-        public void Cadastrar(Cardapio produto)
+        public void AdicionarProduto(Cardapio produto)
         {
-            //if (produto == null){}
-            using (var conexao = new MySqlConnection(_conexaoMySql))
-            {
-                conexao.Open();
-                MySqlCommand cmd = new MySqlCommand("insert into tbCardapio(nome, ingredientes, preco, codigobr, descricao, categoria, coditemlote) values (@nome, @preco, @descricao)", conexao);
-                cmd.Parameters.Add("@nome", MySqlDbType.VarChar).Value = produto.Nome;
-                cmd.Parameters.Add("@preco", MySqlDbType.Decimal).Value = produto.Preco;
-                cmd.Parameters.Add("@descricao", MySqlDbType.VarChar).Value = produto.Descricao;
-                cmd.ExecuteNonQuery();
-                conexao.Close();
-            }
-        }
+            using var conexao = new MySqlConnection(_conexaoMySql);
+            conexao.Open();
 
-        public bool Atualizar(Cardapio produto)
-        {
-            try
-            {
-                using (var conexao = new MySqlConnection(_conexaoMySql))
-                {
-                    conexao.Open();
-                    MySqlCommand cmd = new MySqlCommand("update tbCardapio set Nome=@nome, Descricao=@descricao, Preco=@preco where IdPrato = @id", conexao);
-                    cmd.Parameters.Add("@id", MySqlDbType.Int32).Value = produto.IdPrato;
-                    cmd.Parameters.Add("@nome", MySqlDbType.VarChar).Value = produto.Nome;
-                    cmd.Parameters.Add("@preco", MySqlDbType.Decimal).Value = produto.Preco;
-                    cmd.Parameters.Add("@descricao", MySqlDbType.VarChar).Value = produto.Descricao;
-                    int linhasAfetadas = cmd.ExecuteNonQuery();
-                    return linhasAfetadas > 0;
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Erro ao Atualizar o Produto: {ex.Message}");
-                return false;
-            }
+            using var cmd = new MySqlCommand("addDish", conexao);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            cmd.Parameters.AddWithValue("@name", produto.Nome);
+            cmd.Parameters.AddWithValue("@description", produto.Descricao);
+            cmd.Parameters.AddWithValue("@price", produto.Preco);
+            cmd.ExecuteNonQuery();
         }
 
         public IEnumerable<Cardapio> TodosProdutos()
@@ -53,7 +30,8 @@ namespace TacoPIca_loco.Repositorio
             using (var conexao = new MySqlConnection(_conexaoMySql))
             {
                 conexao.Open();
-                MySqlCommand cmd = new MySqlCommand("Select * from tbCardapio", conexao);
+                MySqlCommand cmd = new MySqlCommand("getAllDishes", conexao);
+                cmd.CommandType = CommandType.StoredProcedure;
                 MySqlDataAdapter da = new MySqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
@@ -62,14 +40,15 @@ namespace TacoPIca_loco.Repositorio
                 foreach (DataRow dr in dt.Rows)
                 {
                     produtos.Add(
-                            new Cardapio()
-                            {
-                                IdPrato = Convert.ToInt32(dr["IdPrato"]),
-                                Nome = ((string)dr["Nome"]),
-                                Descricao = ((string)dr["Descricao"]),
-                                Preco = Convert.ToDecimal(dr["Preco"])
-                            });
+                        new Cardapio()
+                        {
+                            IdPrato = Convert.ToInt32(dr["IdPrato"]),
+                            Nome = ((string)dr["Nome"]),
+                            Descricao = ((string)dr["Descricao"]),
+                            Preco = Convert.ToDecimal(dr["Preco"])
+                        });
                 }
+
                 return produtos;
             }
         }
@@ -93,20 +72,35 @@ namespace TacoPIca_loco.Repositorio
                     produto.Descricao = (string)(dr["Descricao"]);
                     produto.Preco = Convert.ToDecimal(dr["Preco"]);
                 }
+
                 return produto;
             }
         }
 
-        public void Excluir(int Id)
+        public void ApagarProduto(int id)
         {
             using (var conexao = new MySqlConnection(_conexaoMySql))
             {
                 conexao.Open();
-                MySqlCommand cmd = new MySqlCommand("delete from tbCardapio where IdPrato = @id", conexao);
-                cmd.Parameters.AddWithValue("idPrato", Id);
-                int i = cmd.ExecuteNonQuery();
-                conexao.Close();
+                MySqlCommand cmd = new MySqlCommand("DELETE FROM tbCardapio WHERE IdPrato = @id", conexao);
+                cmd.Parameters.AddWithValue("@id", id);
+                cmd.ExecuteNonQuery();
             }
         }
+        
+        public void EditarProduto(Cardapio produto)
+        {
+            using var conexao = new MySqlConnection(_conexaoMySql);
+            conexao.Open();
+
+            var cmd = new MySqlCommand("UPDATE tbCardapio SET Nome = @nome, Descricao = @descricao, Preco = @preco WHERE IdPrato = @id", conexao);
+            cmd.Parameters.AddWithValue("@id", produto.IdPrato);
+            cmd.Parameters.AddWithValue("@nome", produto.Nome);
+            cmd.Parameters.AddWithValue("@descricao", produto.Descricao);
+            cmd.Parameters.AddWithValue("@preco", produto.Preco);
+
+            cmd.ExecuteNonQuery();
+        }
+
     }
 }

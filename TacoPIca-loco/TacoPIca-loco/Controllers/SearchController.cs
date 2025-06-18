@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using TacoPIca_loco.Models.ViewModels;
 using TacoPIca_loco.Repositorio;
 
@@ -30,6 +31,53 @@ namespace TacoPIca_loco.Controllers
             };
 
             return View(model);
+        }
+        public IActionResult ApagarProduto(int id)
+        {
+            _cardapioRepositorio.ApagarProduto(id);
+            return RedirectToAction("Search");
+        }
+        
+        public IActionResult ApagarFuncionario(int id)
+        {
+            _funcionarioRepositorio.ApagarFuncionario(id);
+            return RedirectToAction("Search");
+        }
+
+        public IActionResult ApagarFornecedor(int id)
+        {
+            _fornecedorRepositorio.ApagarFornecedor(id);
+            return RedirectToAction("Search");
+        }
+        
+        public IActionResult EditarPrato(int id)
+        {
+            var prato = _cardapioRepositorio.ObterProduto(id);
+
+            TempData["TipoEdicao"] = "Prato";
+            TempData["Item"] = JsonConvert.SerializeObject(prato);
+
+            return RedirectToAction("Add", "Add");
+        }
+        
+        public IActionResult EditarFuncionario(int id)
+        {
+            var funcionario = _funcionarioRepositorio.ObterFuncionario(id); 
+
+            TempData["TipoEdicao"] = "funcionario";
+            TempData["Item"] = JsonConvert.SerializeObject(funcionario);
+
+            return RedirectToAction("Add", "Add");
+        }
+        
+        public IActionResult EditarFornecedor(int id)
+        {
+            var fornecedor = _fornecedorRepositorio.ObterFornecedor(id); 
+
+            TempData["TipoEdicao"] = "Fornecedor";
+            TempData["Item"] = JsonConvert.SerializeObject(fornecedor);
+
+            return RedirectToAction("Add", "Add");
         }
     }
 }
